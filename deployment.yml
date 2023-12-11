@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: acmecorp-developer-iq-git-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: acmecorp-developer-iq-git-service
+  template:
+    metadata:
+      labels:
+        app: acmecorp-developer-iq-git-service
+    spec:
+      containers:
+      - name: container-acmecorp-developer-iq-git-service
+        image: gcr.io/acmecorp-developer-iq/acmecorp-developer-iq-git-service:prod
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: '128Mi'
+            cpu: '500m'
