@@ -15,6 +15,6 @@ async def index():
 
 app.include_router(router, prefix="/git")
 
-if __name__ == "__main__":
-    from uvicorn import run
-    run("main:app", host="localhost", port=86, reload=True)
+# if __name__ == "__main__":
+#     from uvicorn import run
+#     run("main:app", host="localhost", port=86, reload=True)
