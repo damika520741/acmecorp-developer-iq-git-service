@@ -4,10 +4,6 @@ import service
 
 router = APIRouter()
 
-@router.get("/contributor")
-async def get_all_contributor_commit(git: Git):
-    return await service.get_all_contributor_commit(git)
-
 @router.get("/commits")
 async def get_commits(git: Git):
     return await service.get_commits(git)
